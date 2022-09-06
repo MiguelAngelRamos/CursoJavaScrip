@@ -24,4 +24,4 @@ if(true) {
   console.log(color);
 }
 console.log(altura); //* 400
-console.log(color);
+console.log(color); //! no es accesible fuera del if

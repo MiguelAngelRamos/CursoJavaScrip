@@ -4,7 +4,9 @@
 //* CamelCase 
 //* AutomovilDeportivo "UpperCamelCase" (Pascal Case) Nombre de Clases 
 //* arrayNumero "lowerCamelCase" para declaracion de variables, funciones y métodos 
+
 const arrayNumero = [10, 20, 30, 'Hola Mundo']; //* longitud (length) "4"
+
 console.log(arrayNumero[0]); //* 10
 console.log(arrayNumero[1]); //* 20
 console.log(arrayNumero[2]); //* 30
