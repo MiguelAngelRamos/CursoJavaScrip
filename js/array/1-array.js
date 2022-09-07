@@ -1,6 +1,5 @@
 // * Array (Vectores) unidimensionales
 //* Nos sirve para agrupar elementos
-
 const numeros = [10, 55, 108]; // * una dimensión
 const amigos = new Array('Pedro', 'Juan', 'Diego');
 
