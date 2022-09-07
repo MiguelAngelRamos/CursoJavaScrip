@@ -1,5 +1,6 @@
 //* Funciones en JavaScript
 //* Nos permite reutilizar el código
+
 //* Variables
 let numero1 = 4;
 let numero2 = 10;
@@ -12,6 +13,7 @@ function sumar(a, b) {
   return resultado;
 }
 //* El llamado a la función para que se ejecute
+//* sumar(numero1, numero2);
 const resultadoSuma = sumar(numero1, numero2);
 // console.log(resultadoSuma);
 
@@ -33,6 +35,11 @@ console.log(sumarAnonimo(numero1, numero2));
 //   return resultado;
 // };
 
+//* Cuando tenemos una funcion que solo retorna ejemplo
+// const sumarArrow = (a, b ) => {
+//   return a + b;
+// }
+//* La podemos escribir de la siguiente manera
 const sumarArrow = (a, b) => a + b;
 console.log(sumarArrow(numero1, numero2));
 

@@ -38,10 +38,12 @@ console.log(carritoCopia); //* la copia
 carritoCopia.push(producto4);
 console.log(carrito); //* original
 console.log(carritoCopia); //* la copia
+//! nos damos cuenta que la copia cuando cambia sus valores afecta al array original, esto se debe a que comparten la referencia
+
 // * copiar un arreglo y no morir en el intento
-carritoCopiaSinError = [...carrito]; //* utilizamos el spread operator
+carritoCopiaSinError = [...carrito]; //* utilizamos el spread operator de esta forma, no copiamos la referencia.
 carritoCopiaSinError.push(producto5);
 
 console.log(carrito); //* original
 console.log(carritoCopia); //* la copia
-console.log(carritoCopiaSinError); //* copia sin error
+console.log(carritoCopiaSinError); //* copia sin error (este array se le asignaron los valores por el spread operator y si modificamos la copia no afecta al original)

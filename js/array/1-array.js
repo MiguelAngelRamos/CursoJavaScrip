@@ -1,8 +1,8 @@
 // * Array (Vectores) unidimensionales
 //* Nos sirve para agrupar elementos
-const numeros = [10, 55, 108]; // * una dimensión
-const amigos = new Array('Pedro', 'Juan', 'Diego');
-//* Un Arreglo puede contener cualquier tipo
+const numeros = [10, 55, 108]; // * La forma moderna de crear un array en este caso es de una dimensión
+const amigos = new Array('Pedro', 'Juan', 'Diego'); // * Esta la forma antigua de como se creaba un array ( es de una dimensión)
+//* Un Arreglo puede contener cualquier tipo de valor, en este caso tenemos: string, numbers, booleans, null y object
 const arregloFull = ["Mouse", 50, false, "not", null, { nombre: 'Miguel'}];
 // console.log(arregloFull);
 // console.table(arregloFull);
