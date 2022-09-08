@@ -16,6 +16,12 @@ const usuarios = [
   { id: 3, name: 'Diego'},
 ];
 
+let usuariosRespaldo = [...usuarios];
+console.log(usuariosRespaldo);
+usuariosRespaldo.push({id: 4, name: 'JavaScript'});
+console.log(usuariosRespaldo);
+console.log(usuarios);
+
 const resultadoJsx = usuarios.map((user)=> {
   //* alt + 96 
   return `<li>${user.name}</li>`;
