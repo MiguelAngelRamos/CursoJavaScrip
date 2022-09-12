@@ -31,6 +31,33 @@ const getCharacterForName = async nameCharacter => {
 const init = async () => {
   const characters = await getCharacters();
   console.log(characters);
-  console.log(characters.results);
+  console.log(characters.results); //* el arreglo de los personajes
+
+  createCards(characters.results);
 };
 init();
+
+//* Que manda a crear la tarjeta
+const createCards = characters => {
+  console.log(characters); // * estamos recibiendo el arreglo
+  characters.map( personaje => cardCharacter(personaje));
+
+};
+//* funcion que es la tarjeta, recibe el objeto personaje
+const cardCharacter = character => {
+  console.log(character);
+}
+
+
+
+
+
+
+// <div class="card" style="width: 18rem;">
+//   <img src="..." class="card-img-top" alt="...">
+//   <div class="card-body">
+//     <h5 class="card-title">Card title</h5>
+//     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+//     <a href="#" class="btn btn-primary">Go somewhere</a>
+//   </div>
+// </div>
