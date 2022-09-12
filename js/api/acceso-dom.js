@@ -17,3 +17,20 @@ const getCharacters = async () => {
 };
 
 //* A Buscar un personaje por su nombre
+const getCharacterForName = async nameCharacter => {
+  try {
+    //* alt + 96
+    const response = await fetch(`https://rickandmortyapi.com/api/character/?name=${nameCharacter}`);
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    throw error;
+  }
+};
+
+const init = async () => {
+  const characters = await getCharacters();
+  console.log(characters);
+  console.log(characters.results);
+};
+init();
