@@ -79,11 +79,22 @@ const cardCharacter = character => {
 
 }
 
+// * LLAMAR AL FORMULARIO
+//* El evento se esta enviando de forma implicita en la funcion
+//* handleSubmit
+formData.addEventListener('submit', handleSubmit);
 
-
-
-
-
-
-
-
+function handleSubmit(event) {
+  // console.log(event);
+  event.preventDefault();
+  const form = new FormData(this);
+  cleanRow();
+  // console.log(form.get('character')); /* capturamos lo que escribe el usuario en el input
+  // const name = form.get('character');
+  //* lo vamos a realizar con promesa
+  getCharacterForName(form.get('character')).then( data => createCards(data.results)).catch(err => console.log(err));
+}
+//* Una función que limpia la fila
+const cleanRow = () => {
+  rowCards.innerHTML = '';
+}
