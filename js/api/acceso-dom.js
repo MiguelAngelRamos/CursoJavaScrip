@@ -46,6 +46,37 @@ const createCards = characters => {
 //* funcion que es la tarjeta, recibe el objeto personaje
 const cardCharacter = character => {
   console.log(character);
+  // * Creamos los elementos html
+  const cardBootstrap = document.createElement('div');
+  const imgCard = document.createElement('img');
+  const cardBody = document.createElement('div');
+  const titleCharacter = document.createElement('h5');
+  const btnByIdCharacter = document.createElement('a');
+
+  //* Creamos los textos solo los textos de los elementos
+  const nameCharacter = document.createTextNode(character.name);
+  // const nameCharacter = character.name;
+  const textButtonCharacter = document.createTextNode('Ir al Personaje');
+
+  //* Añadir las clases
+
+  cardBootstrap.classList.add('card', 'mt-4');
+  imgCard.classList.add('card-img-top', 'mt-2');
+  cardBody.classList.add('card-body');
+  titleCharacter.classList.add('card-title', 'text-center');
+  btnByIdCharacter.classList.add('btn', 'btn-secondary', 'mb-2');
+
+  //* Agregar los textos a los elementos
+  titleCharacter.appendChild(nameCharacter);
+  btnByIdCharacter.appendChild(textButtonCharacter);
+  imgCard.src=character.image;
+
+  // * El renderizado
+  cardBootstrap.append(imgCard, cardBody, btnByIdCharacter);
+  cardBody.append(titleCharacter);
+  //* añadir a la fila (row)
+  rowCards.append(cardBootstrap);
+
 }
 
 
@@ -53,11 +84,6 @@ const cardCharacter = character => {
 
 
 
-// <div class="card" style="width: 18rem;">
-//   <img src="..." class="card-img-top" alt="...">
-//   <div class="card-body">
-//     <h5 class="card-title">Card title</h5>
-//     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-//     <a href="#" class="btn btn-primary">Go somewhere</a>
-//   </div>
-// </div>
+
+
+
