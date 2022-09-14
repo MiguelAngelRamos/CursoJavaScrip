@@ -78,7 +78,6 @@ const cardCharacter = character => {
   rowCards.append(cardBootstrap);
 
 }
-
 // * LLAMAR AL FORMULARIO
 //* El evento se esta enviando de forma implicita en la funcion
 //* handleSubmit
